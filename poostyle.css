@@ -101,3 +101,9 @@ section {
 .heading input[type=text]:focus::placeholder {
     opacity: 0;
 }
+
+a {
+    color: aqua;
+    font-size: 15px;
+    text-decoration: none;
+}
