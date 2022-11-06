@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="HoverChangeCover.css">
+</head>
+<body>
+    
+    <div class="container">
+      <ul class="navi">
+        <li data-image="/EXAMPLE/images/portrait-01.jpg"><a href="#none" data-text="ABOUT">ABOUT</a></li>
+        <li data-image="/EXAMPLE/images/portrait-02.jpg"><a href="#none" data-text="INSTRUCTOR">INSTRUCTOR</a></li>
+        <li data-image="/EXAMPLE/images/portrait-03.jpg"><a href="#none" data-text="CLASS">CLASS</a></li>
+        <li data-image="/EXAMPLE/images/portrait-04.jpg"><a href="#none" data-text="LOCATION">LOCATION</a></li>
+        <!-- li에 들어간 data-image는 jquery에 쓸 속성,
+        a에 들어간 data-text는 before쓸 때 content 안에! -->
+      </ul>
+      <div class="photo"></div>
+    </div>
+
+
+    <!-- ''사용안하는건 변수뿐! 속성은 ''써줘야함  -->
+    <script>
+          $('.navi li').mouseenter(function(){
+        var changeImage = $(this).attr('data-image')
+        $('.photo').css({
+          'background-image': 'url('+ changeImage +')'
+        })
+      })
+      $('.navi li').mouseleave(function(){
+        $('.photo').css({
+          'background-image': ''
+        })
+      })
+    </script>
+
+</body>
+</html>
