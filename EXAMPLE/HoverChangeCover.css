@@ -50,7 +50,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(/EXAMPLE/images/portrait-initial.jpg);
+    background-image: url(../EXAMPLE/images/portrait-initial.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
