@@ -1,0 +1,185 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+/* 쉬운것부터! */
+
+.item {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.288);
+    /* border: 1px solid red; */
+}
+.item img {
+    transition: 0.5s;
+}
+.detail {
+    background-color: #f8f8f8;
+    position: absolute;
+
+    /* position: absolute; (자식요소)가 들어가게되면,
+    무조건 inline-block으로 display 성질이 바뀜 */
+    /* 그렇기 때문에, 가로 값이 아예 사라짐! 그래서 width */
+    width: 100%;
+    bottom: -389px;
+    left: 0;
+    height: 100%;
+    transition: 0.5s;
+    padding: 1px 20px;
+    box-sizing: border-box;
+}
+
+.item:hover .detail {
+    bottom: -50%;
+}
+
+.item:hover img {
+    filter: blur(2px);
+}
+
+/* title */
+.title {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.title h2 {
+    font-size: 16px;
+    color: #888;
+    float: left;
+}
+.title h2 em {
+    font-style: normal;
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+.title span {
+    float: right;
+    margin-top: 13px;
+    font-size: 18px;
+    color: crimson;
+}
+
+.info {
+    position: relative;
+    /* 하트모양 폰트어썸 position 때문에 여기에 relative 들어감 */
+}
+
+/* Size */
+.size {
+    margin: 5px 0;
+}
+.size label, .color label {
+    display: block ;
+}
+.size span,
+.color span {
+    transition: 0.3s;
+}
+.size span {
+    font-size: 12px;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 15px;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.size span.active,
+.size span:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.color span {
+    /* border: 1px solid #000; */
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    padding: 2px;
+    margin: 5px 6px 5px 0;
+}
+
+.color span.active {
+    border-radius: 50%;
+}
+
+/* nth-child는 label 부터 따지는데,
+nth-of-type 으로 쓰면, span들만 따져줌! */
+
+.color span:nth-of-type(1) {
+    background-color: #808000;
+}
+.color span:nth-of-type(2) {
+    background-color: #ff0000;
+}
+.color span:nth-of-type(3) {
+    background-color: #ffc0cb;
+}
+.color span:nth-of-type(4) {
+    background-color: #00ffff;
+}
+.color span:nth-of-type(5) {
+    background-color: #0000ff;
+}
+
+.Add-cart {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.Add-cart:hover {
+    background-color: rgba(0, 0, 0, 0.836);
+    color: #fff;   
+}
+
+/* Like */
+
+.like {
+    cursor: pointer;
+}
+.like:before {
+    content: '\f08a';
+    font-family: fontawesome;
+    color: #ccc;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+.like.active:before {
+    content: '\f004';
+    color: crimson;
+}

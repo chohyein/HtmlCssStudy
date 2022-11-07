@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="06ShoppingItem.css">
+    <title>ShoppingItem</title>
+</head>
+<body>
+    
+  <div class="item">
+    <img src="./images/model-female.png">
+    <div class="detail">
+      <div class="title">
+        <h2> <em>Nightgown</em> Women's Designer Wear</h2>
+        <span>$55.99</span>
+      </div>
+      <div class="info">
+        <div class="size">
+          <label>Size</label>
+          <span>XS</span>
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+          <span>XL</span>
+        </div>
+        <div class="color">
+          <label>Colors</label>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="like"></span>
+      </div>
+      <button class="Add-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    $('.color span, .size span').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+    })
+    $('.like').click(function(){
+      $(this).toggleClass('active')
+    })
+    
+  </script>
+
+</body>
+</html>
