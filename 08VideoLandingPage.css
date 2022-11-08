@@ -1,0 +1,43 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Monoton', cursive;
+    color: #222;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* BG Video*/
+.video-frame video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;  /* min = 최소 */
+    z-index: -1; /* video가 최우선으로 되어있어서, 뒤로보내기 */
+
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+/* Heading */
+
