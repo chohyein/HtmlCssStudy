@@ -11,8 +11,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    font-family: 'Monoton', cursive;
-    color: #222;
+    /* font-family: 'Monoton', cursive; */
+    color: #fff;
     font-weight: 300;
     margin: 0;
     padding: 0;
@@ -24,11 +24,21 @@ a {
 }
 
 /* BG Video*/
+
+.video-frame:before {
+    content: '';
+    background: linear-gradient(-135deg, crimson, transparent);
+    /* 그라디언트 : 각도, 시작색상, 끝색상 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .video-frame video {
     position: fixed;
     min-width: 100%;
     min-height: 100%;  /* min = 최소 */
     z-index: -1; /* video가 최우선으로 되어있어서, 뒤로보내기 */
+    top: 0;
 
 }
 
@@ -37,7 +47,217 @@ a {
     position: absolute;
     top: 50px;
     left: 100px;
+    z-index: 1;
 }
 
 /* Heading */
+.heading {
+    position: absolute;
+    width: 700px;
+    left: 100px;
+    bottom: 100px;
+    animation: showing1 2s 1s linear;
+    animation-fill-mode: both;
+    /* animation이 끝난다음에 다시 스탠바이하는 것 하지마! 의 의미 */
+}
+.heading h1 {
+    font-size: 60px;
+    margin: 0;
+}
+.heading h1 span {
+    display: block;
+    color: crimson;
+}
+.heading p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
 
+.btn-book,
+.btn-learn {
+    width: 130px;
+    display: inline-block;
+    padding: 7px;
+    border-radius: 18px;
+    border: 2px solid #fff;
+    text-align: center;
+    margin-right: 10px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.btn-book {
+    background-color: #fff;
+}
+
+.btn-book:hover {
+    background-color: #222;
+    color: #fff;
+    border-color: transparent;
+}
+.btn-learn {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-learn:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+
+/* Anniversary */
+.anniversary {
+    position: absolute;
+    right: 100px;
+    bottom: 70px;
+    color: #222;
+    text-align: center;
+    animation: showing2 2s 1s linear;
+    /* animation : 이름 속도 delay */
+    animation-fill-mode: both;
+    z-index: 1;
+}
+.anniversary em {
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 4px;
+    margin-bottom: -20px;
+}
+.anniversary span {
+    font-family: 'Monoton', sans-serif;
+    font-size: 100px;
+}
+
+/* Trigger */
+.trigger {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+    z-index: 1;
+}
+.trigger span {
+    position: absolute;
+    /* positon: absolute가 들어가면 display: inline-block; 으로 변경됨 */
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transition: 0.3s;
+}
+.trigger span:nth-child(1) {
+    top: 0;
+}
+.trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+}
+.trigger span:nth-child(3) {
+    top: 100%;
+}
+
+/* Trigger Active = Jquery에서 넣고 빼기 할거임 */
+.trigger.active span {
+    background-color: #fff;   
+}
+
+.trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+    opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+
+
+/* Modal GNB */
+.modal-gnb {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.753);
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.gnb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.gnb a {
+    display: block;
+    font-family: 'Noto+Sans+KR', sans-serif;
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    transition: 0.3s;   
+    animation: gnb 0.5s linear;
+    animation-fill-mode: both;
+    /* animation이 한번 끝나면 그상태 유지해! */
+    opacity: 0;
+}
+
+.gnb a:hover {
+    color: crimson;
+}
+
+/* GNB a 태그 Animation Delay */
+.gnb a:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.gnb a:nth-child(2) {
+    animation-delay: 0.7s;
+}
+.gnb a:nth-child(3) {
+    animation-delay: 0.9s;
+}
+.gnb a:nth-child(4) {
+    animation-delay: 1.1s;
+}
+.gnb a:nth-child(5) {
+    animation-delay: 1.3s;
+}
+
+/* Animation */
+@keyframes showing1 {
+    0% {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+@keyframes showing2 {
+    0% {
+        opacity: 0;
+        margin-right: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+
+
+
+/* GNB a animation */
+@keyframes gnb {
+    0% {
+        opacity: 0;
+        transform: translate(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
