@@ -1,0 +1,130 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+    font-weight: 300;
+    font-size: 15px;
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* .container {} */
+header {
+    border-bottom: 1px solid lightgray;
+    background-color: #fff;
+    height: 60px;
+    text-align: center;
+    padding-top: 13px; 
+    box-sizing: border-box;
+}
+section {
+    height: calc(100vh - 60px);
+    /* section의 높이값 - header 높이값 해야 우측에 스크롤이 사라짐!! */
+    position: relative;
+}
+.login {
+    /* border: 1px solid red; */
+    width: 360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* .login-type {} */
+.login-type h1 {
+  margin-top: 0;
+  font-size: 38px;
+  text-align: center;
+  font-weight: normal;
+}
+.btn {
+  display: block;
+  border: 1px solid rgba(34, 34, 34, 0.281);
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* 또는 텍스트 부분 만들기 */
+.or-text {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.or-text:before,
+.or-text:after {
+  position: absolute;
+  /* 원래 before, after는 inline 요소라서 크기값 가질수 x,
+     position: absolute; 를 주는 순간 모든 요소는
+     inline-block 이 되어, 크기값을 가진다! */
+  content: '';
+  background-color: lightgray;
+  height: 1px;
+  width: 44%;
+  top: 50%;
+}
+
+.or-text:before {
+  left: 0;
+}
+
+.or-text:after {
+  right: 0;
+}
+
+/* nth-child 는 순서만 체크, nth-of-type 은 a태그만 체크! */
+.btn:nth-of-type(1) {
+  color: #222;
+  /* background-color: #fff; */
+  /* background-image: url(images/logo-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center left; */
+  background: #fff url(images/logo-mobile.png) no-repeat center left 10px;
+  /* background 한줄에 넣기 (color 도 있다면 포함해줘야함) */
+  /* 맨 마지막에 숫자 넣어주는 만큼 떨어지고 나타남 */
+}
+.btn:nth-of-type(2) {
+  background: #898c9b url(images/logo-email.png) no-repeat center left 13px;
+}
+.btn:nth-of-type(3) {
+  background: #11ce00 url(images/logo-naver.png) no-repeat center left 13px;
+}
+.btn:nth-of-type(4) {
+  background: #0076fe url(images/logo-facebook.png) no-repeat center left 13px;
+}
+.btn:nth-of-type(5) {
+  background: #00c026 url(images/logo-line.png) no-repeat center left 13px;
+}
+/* .login-footer {} */
+.login-footer p {
+  text-align: center;
+}
+.login-footer p a {
+  font-weight: 400;
+}
+
+.login-footer p a:hover {
+  text-decoration: underline;
+}
