@@ -1,0 +1,134 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+/* Netflix FAQ with jQuery */
+
+
+.faq {
+  /* border: 1px solid red; */
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq-inner {
+  width: 700px;
+  margin: auto;
+}
+.faq-inner h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+.accordion {
+  font-size: 20px;
+}
+.accordion .title,
+.accordion .content {
+  /* border: 1px solid blue; */
+  background-color: rgb(54, 52, 52);
+  padding: 10px 15px;
+}
+
+.accordion .title {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.accordion .title.active {
+  background-color: rgb(36, 42, 59);
+}
+
+
+.accordion .content {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.accordion .title:after {
+  content: "\e9c5";
+  font-family: xeicon;
+  float: right;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.accordion .title.active:after {
+  transform: rotate(45deg);
+}
+
+.newsletter {
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  width: 90%;
+  font-size: 15px;
+}
+
+.newsletter div {
+  display: flex;
+}
+
+
+.newsletter div input[type=email],
+.newsletter div button {
+  border: none;
+  outline: none;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.newsletter div input[type=email] {
+  /* width: 70%; */
+  flex: 3;
+}
+.newsletter div input[type=email]:focus {
+  outline: 1px solid dodgerblue;
+}
+input::placeholder {
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+input:focus::placeholder {
+  font-size: 10px;
+}
+
+.newsletter div button {
+  background-color: #e84118;
+  color: white;
+  cursor: pointer;
+  /* width: 30%; */
+  /* margin-right: -5px; */
+  flex: 1;
+}
+
+.newsletter div button:after {
+  content: "\e93f";
+  font-family: xeicon;
+}
+
