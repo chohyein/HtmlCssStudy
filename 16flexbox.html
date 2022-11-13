@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="16flexbox.css">
+  <title>flexbox</title>
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="images/logo-favicon.png" alt="">
+        </div>
+        <div class="search-box">
+          <i class="open-search xi-search"></i>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <h1>Section Content</h1>
+    </section>
+  </div>
+
+  
+  <div class="modal-search">
+    <i class="close-search xi-close-thin"></i>
+    <div class="search">
+      <div class="field">
+        <input type="search" placeholder="What are you looking for?">
+        <input type="button" value="Search">
+      </div>
+      <p class="hash-tag">
+        #푸 #쭌푸 #푸품망 #왕밤망
+      </p>
+    </div>
+  </div>
+
+  <script>
+    $('.search .field input[type=search]').focus(function(){
+      $(this).parent().next().css('display', 'block')
+    })
+    $('.search .field input[type=search]').blur(function(){
+      $(this).parent().next().css('display', 'none')
+    })
+
+    $('.open-search').click(function(){
+      $('.modal-search').addClass('active')
+    })
+    $('.close-search').click(function(){
+      $('.modal-search').removeClass('active')
+    })
+  </script>
+
+</body>
+</html>

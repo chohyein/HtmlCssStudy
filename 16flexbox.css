@@ -1,0 +1,147 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  /* body에 주게 되면, form 요소 (input, button)에는 적용 X */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Search from Modal with Flexbox */
+
+header {
+  height: 80px;
+  background-color: slategray;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+nav {
+  width: 900px;
+  /* 일반적으로 웹사이트에서는 너비를 1100~1280px 로 잡음 */
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  /* space-between : 두개를 각각 양쪽으로 쪼개주는 아이 */
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+}
+.search-box {
+  color: aliceblue;
+  font-size: 2em;
+}
+
+.search-box i {
+  cursor: pointer;
+}
+section {
+  background-color: #fff;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+.modal-search {
+  position: fixed;
+  background-color: #333;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  /* display: none; 을 쓰면 안됨! 그럼 속성이 같이 사라짐 */ 
+  top: -300px;
+  transition: 0.3s;
+}
+
+.modal-search.active {
+  top: 0;
+}
+.close-search {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #777;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.search {
+  /* border: 1px solid red; */
+  width: 500px;
+}
+.search .field {
+  /* border: 5px solid green; */
+  display: flex;
+  position: relative;
+}
+
+.search .field:before {
+  content: "\e97a";
+  font-family: xeicon;
+  position: absolute;
+  color: #777;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+
+
+.search .field input[type=search],
+.search .field input[type=button] {
+  padding: 15px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.search .field input[type=search] {
+  flex: 3;
+  padding-left: 50px;
+}
+.search .field input[type=button] {
+  flex: 1;
+  background-color: rgb(197, 63, 46);
+  color: white;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.search .field input[type=button]:hover {
+  opacity: 1;
+}
+
+.search .field input[type=search]::placeholder {
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.search .field input[type=search]:focus::placeholder {
+  opacity: 0;
+}
+
+.hash-tag {
+  font-size: 10px;
+  color: blanchedalmond;
+  display: none;
+}
