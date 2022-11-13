@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="14modalVanillaJava.css">
+  <title>Modal</title>
+</head>
+<body>
+  <a href="#none" onclick="openModal();">Open Fade-in Modal with jQuery</a>
+
+  <div id="modal-notice" class="modal">
+    <div class="modal-content">
+      <a class="btn-close" href="#none" onclick="closeModal()">X</a>
+      <h2>Welcome to Teams!</h2>
+      <img src="images/group.png">fixed
+      <p>
+        Microsoft Teams is a collaboration app built for hybrid work so you and your team stay informed, organized, and connected - all in one place.
+      </p>
+      <a class="btn-guide" href="#none">Open Guide</a>
+    </div>
+  </div>
+
+  <script>
+    let modal = document.getElementById('modal-notice');
+
+    function openModal() {
+      modal.classList.add('active')
+    }
+    function closeModal () {
+      modal.classList.remove('active')
+    }
+  </script>
+</body>
+</html>
