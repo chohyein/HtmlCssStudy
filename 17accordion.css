@@ -1,0 +1,59 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.5em;
+}
+
+
+.html-accordion {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.226);
+  width: 600px;
+  padding: 40px 20px;
+  margin: 50px auto;
+}
+.html-accordion h1 {
+  text-align: center;
+  margin-top: 0;
+}
+details {
+  padding: 1em;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+details summary:after {
+  content: '\f107';
+  font-family: fontawesome;
+  float: right;
+}
+
+details[open] summary:after {
+  transform: rotateX(180deg);
+}
+.details-content {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+.details-content p {
+  margin: 0;
+}
