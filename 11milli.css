@@ -1,0 +1,79 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: rgb(248, 226, 99);
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.faq {
+  height: 100vh;
+}
+.faq-inner {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion h1 {
+  font-size: 35px;
+  text-align: center;
+}
+.accordion .item {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.185);
+  
+}
+.accordion .item .title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion .item .title:after {
+  content: "\f107";
+  font-family: fontawesome;
+  float: right;
+  margin-top: 4px;
+}
+
+.accordion .item .title.active::after {
+  transform: rotateX(180deg);
+}
+.accordion .item .content {
+  display: none;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.788);
+  /* border-width: thin; */
+  margin-top: 10px;
+}
+.accordion .item .content p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.accordion .item .content em {
+  font-weight: bold;
+  font-style: normal;
+}
