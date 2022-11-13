@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="12modal.js"></script>
+  <!-- 만드는 파일 연결이 더 밑에 있어야 작동함 -->
+  <link rel="stylesheet" href="12modal.css">
+  <title>Modal</title>
+</head>
+<body>
+  <a class="modal-notice" href="#none">Open Fade-in Modal with jQuery</a>
+
+  <div class="modal">
+    <div class="modal-content">
+      <a class="btn-close" href="#none">X</a>
+      <h2>Welcome to Teams!</h2>
+      <img src="images/group.png">
+      <p>
+        Microsoft Teams is a collaboration app built for hybrid work so you and your team stay informed, organized, and connected - all in one place.
+      </p>
+      <a class="btn-guide" href="#none">Open Guide</a>
+    </div>
+  </div>
+
+  <script>
+    $('.modal-notice').click(function(){
+      $('.modal').fadeIn()
+    })
+    $('.btn-close').click(function(){
+      $('.modal').fadeOut()
+    })
+  </script>
+</body>
+</html>

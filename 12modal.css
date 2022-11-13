@@ -1,0 +1,58 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 50px;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+/* jQuery Fade In Out Modal */
+
+.modal {
+  position: fixed;
+  background-color: rgba(34, 34, 34, 0.377);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+.modal-content {
+  background-color: #eee;
+  width: 350px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.349);
+  text-align: center;
+}
+.modal-content .btn-close {
+  float: right;
+  color: black;
+}
+
+.btn-guide {
+  background-color: #616BEE;
+  color: white;
+  padding: 7px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: block;
+  /* a태그는 inline 요소라, 크기값을 가질 수 없으므로
+  display 를 block으로 주면 너비값이 100%로 차게됨 */
+}
