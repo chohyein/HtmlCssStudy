@@ -1,0 +1,135 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0; */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+}
+
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.modal.active {
+  opacity: 1;
+}
+.modal-content {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+  display: flex;
+  overflow: hidden;
+  /* 화면을 분할한다고 생각, 분할할 요소에 가서 flex:2; 이런식으로 넣어주기 */
+}
+
+.modal-content > div {
+  padding: 20px;
+}
+.photo {
+  flex: 1;
+  background: url(images/office.jpg) no-repeat center right;
+  background-size: cover;
+}
+.desc {
+  flex: 2;
+  text-align: center;
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+}
+
+.btn-close:hover {
+  color: #000;
+}
+.desc-content input[type=email] {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+  /* html 자체에서 생기는거라 outline 없애버리기 */
+  outline: none;
+}
+
+.desc-content input[type=email]::placeholder {
+  color: #999;
+  transition: 0.5s;
+}
+.desc-content input[type=email]:focus::placeholder {
+  visibility: hidden;
+  opacity: 0;
+  /* display:none; 으로 하면 안되고, visibility로 조정
+  opacity는 transition을 넣기 위해서 넣은 것 */
+}
+
+.desc-content button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 5px;
+
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.219);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.modal-content > div {
+  width: 350px;
+}
+
+.photo {
+  flex-basis: 250px;
+  /* flex로 크기를 잡아뒀기 때문에! */
+}

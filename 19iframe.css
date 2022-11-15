@@ -1,0 +1,88 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+body {
+  /* margin: 0; */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+}
+
+
+/* input이나 label을 선택할 때는 꼭 속성 [] 까지 같이 선택하기 */
+input[id=trigger] {
+  display: none;
+}
+
+label[for=trigger] {
+  /* border: 1px solid red; */
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+label[for=trigger] span {
+  display: inline-block;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  /* position:absolute 를 주면 모든 요소는 inline-block이 됨 / 크기값을 줘야 적용됨! */
+  width: 100%;
+  left: 0;
+  transition: 0.3s;
+}
+
+label[for=trigger] span:nth-child(1) {
+  top: 0;
+}
+
+label[for=trigger] span:nth-child(2) {
+  top: 50%;
+}
+
+label[for=trigger] span:nth-child(3) {
+  top: 100%;
+}
+
+input[id=trigger]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+input[id=trigger]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id=trigger]:checked + label span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: rgb(252, 209, 216);
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: 0.3s;
+}
+
+input[id=trigger]:checked ~ .sidebar {
+ left: 0;
+}
+
+input[id=trigger]:checked + label span {
+  left: 205px;
+}

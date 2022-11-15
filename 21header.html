@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="21header.css">
+  <title>header</title>
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <div class="lnb-inner">LNB inner</div>
+      <div class="gnb-inner">GNB inner</div>
+    </header>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quas est, tempore magnam ullam, repellendus inventore soluta saepe dignissimos atque quam voluptatem autem aperiam ea expedita? Assumenda nisi explicabo amet, nihil mollitia et rerum adipisci esse! Illum adipisci unde minus, iure ipsa temporibus, architecto quidem explicabo sit a beatae. Laborum numquam, tenetur voluptatem ipsa cum perferendis! Cumque esse nesciunt sequi, dolores at nobis assumenda voluptas molestias nam ea eum atque, ullam ratione. Unde qui distinctio exercitationem consequuntur cumque minus maxime quam enim in possimus veritatis, sapiente aperiam est molestias? Accusantium ad temporibus et animi. Id nisi consequuntur eum debitis sit.
+      </p>
+    </section>
+  </div>
+
+  <a class="btn-top" href=""><i class="fa fa-arrow-up"></i></a>
+
+</body>
+
+
+<script>
+  $(window).scroll(function(){
+    if($(window).scrollTop() > 50) {
+      $('header').addClass('active')
+    }
+    else {
+      $('header').removeClass('active')
+    }
+  })
+</script>
+
+</html>
