@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Document</title>
+  <script src="wow.min.js"></script>
+  <style>
+    .parent {
+      border: 1px solid #000;
+      width: 800px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .parent div {
+      float: left;
+      border: 3px solid red;
+      width: 50%;
+      height: 200px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 200px;
+      font-size: 3em;
+    }
+
+    .ltr {
+      animation: ltr 1s linear both;
+    }
+    .rtl {
+      animation: rtl 1s linear both;
+    }    
+
+
+    @keyframes ltr {
+      0% {
+        opacity: 0;
+        transform: translateX(-150px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);        
+      }
+    }
+
+    @keyframes rtl {
+      0% {
+        opacity: 0;
+        transform: translateX(150px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);        
+      }
+    }
+   
+  </style>
+</head>
+<body>
+
+  <h1>Scroll Reveal Animation</h1>
+  <img src="https://dummyimage.com/800x1500">
+
+  <div class="parent">
+    <div class="ltr wow">left</div>
+    <div class="rtl wow">right</div>
+  </div>
+
+
+  <script>
+   wow = new WOW(
+      {
+      boxClass: 'wow',      // default
+      offset: 150,          // default
+      mobile: true,       // default
+      live: true        // default
+      }
+      )
+    wow.init();
+  </script>
+
+</body>
+</html>
