@@ -142,7 +142,7 @@ body> .infoAndUpNext {
   justify-content: space-between;
   border-top: 1px solid var(--grey-light-color);
   border-bottom: 1px solid var(--grey-light-color);
-  padding: var(--side-padding);
+  padding: var(--side-padding) 0;
 }
 .channel .metadata {
   display: flex;
@@ -176,7 +176,7 @@ body> .infoAndUpNext {
 
 /* Up next */
 .upNext {
-  padding: var(--side-padding);
+  padding: 0 var(--side-padding);
 }
 .upNext > .title {
   font-size: var(--font-medium);
@@ -189,7 +189,7 @@ body> .infoAndUpNext {
 }
 
 .upNext .item .img {
-  flex: 35%;
+  flex-basis: 35%;
   cursor: pointer;
   margin-right: var(--side-padding);
 }
@@ -197,12 +197,12 @@ body> .infoAndUpNext {
   width: 100%;
 }
 .upNext .item .info {
-  flex: 60%;
+  flex-basis: 60%;
   display: flex;
   flex-direction: column;
 }
 .upNext .item .moreBtn {
-  flex: 5%;
+  flex-basis: 5%;
   height: 100%;
 }
 .upNext .item .info .title {
@@ -223,6 +223,9 @@ body> .infoAndUpNext {
 @media screen and (min-width: 768px) {
   .infoAndUpNext {
     flex-direction: row;
-    margin: var(--side-padding);
+    /* margin: var(--side-padding); */
+  }
+  .upNext {
+    padding: 12px;
   }
 }
